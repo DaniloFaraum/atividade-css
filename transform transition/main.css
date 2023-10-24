@@ -63,7 +63,7 @@ div{
     left: 50%;
     transform-origin: top center;
     transform: translateX(-50%);
-    animation: rodarSegundos 60s linear infinite;
+    animation: rodarSegundos 1s linear infinite;
 }
 
 @keyframes rodarRelogio {
