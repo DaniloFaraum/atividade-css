@@ -52,19 +52,48 @@ div{
     100% {opacity: 0%;}
 }
 
-.subir{
+.subir-background{
+    height: 300px;
     position: relative;
 }
 
-.subir:active:hover{
+.subir{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: darkgray;
+    border: none;
+    position: absolute;
+    bottom: 0;
+}
 
+.subir:focus{
     animation-name: subir;
     animation-duration: 2s;
-
 }
 
 @keyframes subir {
-    100% {top: 100px;}
+    50% {bottom: 200px;}
+}
+
+.explodir{
+
+}
+
+.explodir:hover{
+    animation-name: explodir;
+    animation-duration: 2s;
+}
+
+@keyframes explodir {
+    50% {height: 150px;
+        width: 150px;
+    }
+    100%{
+        height: 200px;
+        width: 200px;
+        background-color: red;
+    }
 }
 
 .loading{
@@ -115,8 +144,9 @@ div{
     100% {opacity: 100%;}
 }
 
-section{
+.mudar-background{
     position: relative;
+    height: 50px;
 }
 
 .mudar1{
@@ -135,10 +165,42 @@ section{
 
 @keyframes mudar1 {
     60% {opacity: 0%;}
-    100% {opacity: 100%;}
+    90% {opacity: 100%;}
 }
 
 @keyframes mudar2 {
     0% {opacity: 0%;}
     40% {opacity: 100%;}
+}
+
+.parallax-background{
+    height: 150px;
+    width: 300px;
+    background-image: url(./background.jpg);
+    background-position: center right;
+    position: relative;
+    animation: parallax-background;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+
+.parallax{
+    position: absolute;
+    bottom: 0;
+    animation: parallax;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    background-image: url(./arvore.png);
+    background-size: cover;
+}
+
+@keyframes parallax-background{
+    0% {background-position: center left;}
+    100% {background-position: center right;}
+}
+
+@keyframes parallax {
+    0% {left: 0;}
+    100% {left: 200px;}
 }
